@@ -1,0 +1,21 @@
+{
+  "name": "chriss.website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "next",
+    "build": "next build && next export"
+  },
+  "keywords": [],
+  "author": "chriswynn",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "framer-motion": "^1.8.3",
+    "minireset.css": "0.0.6",
+    "next": "^9.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
