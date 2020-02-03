@@ -7,8 +7,9 @@ function Home() {
       css={{
         maxWidth: "75%",
         margin: "0 auto",
+        paddingTop: "5%",
         "& img": {
-          marginBottom: "5%"
+          marginBottom: "2%"
         }
       }}
     >
