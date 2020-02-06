@@ -8,17 +8,28 @@ import {
   useSpring
 } from "framer-motion";
 
-export default props => {
+export default function(props) {
   const { scrollY } = useViewportScroll();
   const value = useTransform(scrollY, value => value * -1);
   const scrollValue = useSpring(value, { damping: 300, stiffness: 200 });
 
-  useEffect(() => {
+  function setHeight() {
     const main = document.querySelector("main");
     const body = document.querySelector("body");
     const height = main.scrollHeight;
     body.setAttribute("style", `height: ${height}px`);
-  }, []);
+  }
+
+  function handleResize() {
+    setHeight();
+  }
+
+  useEffect(() => {
+    setHeight();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  });
 
   return (
     <Fragment>
@@ -35,4 +46,4 @@ export default props => {
       </div>
     </Fragment>
   );
-};
+}
