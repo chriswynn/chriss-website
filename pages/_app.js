@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import Layout from "../components/Layout";
 import "minireset.css";
 
 function App({ Component, pageProps }) {
   return (
-    <div css={{ background: "#000" }}>
+    <Layout>
       <Component {...pageProps} />;
-    </div>
+    </Layout>
   );
 }
 
