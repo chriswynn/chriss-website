@@ -25,6 +25,10 @@ export default function(props) {
   }
 
   useEffect(() => {
+    const images = document.querySelectorAll("img");
+    images.forEach(i => {
+      i.addEventListener("load", setHeight);
+    });
     setHeight();
     window.addEventListener("resize", handleResize);
 
