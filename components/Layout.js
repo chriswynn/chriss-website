@@ -39,6 +39,7 @@ export default function(props) {
     <Fragment>
       <div
         css={{
+          backgroundColor: "#191919",
           height: "100vh",
           left: 0,
           position: "fixed",
