@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { useEffect, Fragment } from "react";
-import { jsx } from "@emotion/core";
+import { useEffect } from "react";
 import {
   motion,
   useTransform,
@@ -36,19 +34,10 @@ export default function(props) {
   });
 
   return (
-    <Fragment>
-      <div
-        css={{
-          backgroundColor: "#191919",
-          height: "100vh",
-          left: 0,
-          position: "fixed",
-          top: 0,
-          width: "100vw"
-        }}
-      >
-        <motion.main style={{ y: scrollValue }}>{props.children}</motion.main>
-      </div>
-    </Fragment>
+    <div className="page-container">
+      <motion.main className="wrapper" style={{ y: scrollValue }}>
+        {props.children}
+      </motion.main>
+    </div>
   );
 }

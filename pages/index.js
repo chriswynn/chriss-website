@@ -3,16 +3,7 @@ import { jsx } from "@emotion/core";
 
 function Home() {
   return (
-    <div
-      css={{
-        maxWidth: "75%",
-        margin: "0 auto",
-        paddingTop: "5%",
-        "& img": {
-          marginBottom: "2%"
-        }
-      }}
-    >
+    <div className="photos">
       <img src="/img/photos/P1120481.JPG" />
       <img src="/img/photos/P1120484.JPG" />
       <img src="/img/photos/P1120487.JPG" />
