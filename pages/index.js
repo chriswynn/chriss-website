@@ -1,6 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "@emotion/core";
-
 function Home() {
   return (
     <div className="photos">
