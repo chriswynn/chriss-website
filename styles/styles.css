@@ -16,7 +16,7 @@ html, body {
 .wrapper {
   margin: 0 auto;
   max-width: 75%;
-  padding-top: 5%;
+  padding: 5% 0;
   will-change: transform;
 }
 
@@ -26,8 +26,27 @@ html, body {
   }
 }
 
-.photos img {
+.photos .ratio-box {
   margin-bottom: 5%;
+  position: relative;
+}
+
+.photos .ratio-box::after {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.photos .ratio-box:last-child {
+  margin-bottom: 0%;
+}
+.photos img {
+  height: 100%;
+  object-fit: contain;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 h1 {
