@@ -13,6 +13,19 @@ html, body {
   width: 100%;
 }
 
+.page-container::after {
+  background: url("/img/noise.gif");
+  background-size: 600px 600px;
+  background-repeat: repeat;
+  height: 100vh;
+  content: '';
+  position: absolute;
+  opacity: 0.05;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 75%;
